@@ -1,0 +1,211 @@
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  transition: all ease 1s;
+}
+
+.body-active {
+  margin-left: 300px;
+}
+
+.c-hamburger {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: none;
+  cursor: pointer;
+  width: 96px;
+  height: 96px;
+  background: #652897;
+  border: none;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 44px;
+  right: 18px;
+  left: 18px;
+  height: 8px;
+  background: #ffffff;
+}
+
+.c-hamburger span::before, .c-hamburger span::after {
+position: absolute;
+display: block;
+left: 0;
+width: 100%;
+height: 8px; 
+background: #ffffff;
+content: "";
+
+}
+
+.c-hamburger span::before {
+  top: -20px;
+}
+
+.c-hamburger span::after {
+  bottom: -20px;
+}
+
+.c-hamburger-line {
+background: #94077c;
+}
+
+.c-hamburger-line span {
+  transition: background 0s 0.3s;
+}
+
+.c-hamburger-line span::before, .c-hamburger-line span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+
+}
+
+.c-hamburger-line span::before {
+  transition-property: top, transform;
+}
+
+.c-hamburger-line span::after{
+  transition-property: bottom, transform;
+}
+
+.c-hamburger-line.is-active {
+  background: violet;
+}
+
+.c-hamburger-line.is-active span{
+  background: none;
+}
+
+.c-hamburger-line.is-active span::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.c-hamburger-line.is-active span::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.c-hamburger-line.is-active span::before, .c-hamburger-line.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+#menu {
+  width: 300px;
+  margin-left: -284px;
+  background: #ffffff;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease 1s;
+  z-index: 9999;
+}
+
+.menu section {
+  top: 100px;
+} 
+
+.menu.nav-active {
+  margin-left: 0;
+}
+.images img {
+  border:1px;
+
+}
+.container {
+  width: 80%;
+  min-width: 1000px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  color: #666;
+  text-align: justify;
+  padding: 25px;
+}
+
+
+
+
+/* Header Styles */
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header-subtitle {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Navigation Styles */
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Main Content Styles */
+
+.main-content {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Footer Styles */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
