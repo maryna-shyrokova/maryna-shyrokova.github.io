@@ -1,14 +1,15 @@
-document.querySelector('.c-hamburger').addEventListener('click', function (e) {
-    e.preventDefault();
-    this.classList.toggle('is-active');
-    if (this.classList.contains('is-active')) {
-      this.classList.add('is-active');
-      document.querySelector('#menu').classList.add('nav-active');
-      document.body.classList.add('body-active');
-    } else {
-      this.classList.remove('is-active');
-      document.querySelector('#menu').classList.remove('nav-active');
-      document.body.classList.remove('body-active');
-    }
-  });
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission
   
+    // Get the entered name and email values
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+  
+    // Display the submitted data
+    var submittedData = document.getElementById('submittedData');
+    submittedData.innerHTML = `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p>`;
+  
+    // Reset the form fields
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+  });
